@@ -33,11 +33,12 @@ class MainActivity : ComponentActivity() {
 
                     NavHost(navController = navController, startDestination = Screens.Home.route) {
                         composable(Screens.Home.route) {
-                            HomeScreens(navigate = { index ->
-                                navController.navigate(
-                                    Screens.Detail.createRoute(index!!)
-                                )
-                            }
+                            HomeScreens(
+                                navigate = { index ->
+                                    navController.navigate(
+                                        Screens.Detail.createRoute(index!!)
+                                    )
+                                },
                             )
                         }
                         composable(Screens.Detail.route,

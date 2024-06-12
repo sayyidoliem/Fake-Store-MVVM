@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-parcelize")
 }
 
 android {
@@ -87,4 +88,16 @@ dependencies {
 
     //for navigation
     implementation(libs.androidx.navigation.compose)
+
+    //for core system adaptive layout
+    implementation(libs.androidx.adaptive)
+
+    //for adaptive layout
+    implementation(libs.androidx.adaptive.layout)
+
+    //for adaptive layout navigation
+    implementation(libs.androidx.adaptive.navigation)
+
+    //for more material icon
+    implementation (libs.androidx.material.icons.extended)
 }
